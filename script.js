@@ -41,8 +41,15 @@ var loop = function() {
   }
 }
 
+// reset game state
+var reset = function() {
+  xcoord = 0;
+  ycoord = 0;
+}
+
 // starting point
 var start = function() {
+  reset();
   if (getInput("Hello there. Welcome to Rikonia. You are standing in the middle of a field. Which direction would you like to go?") == null)
     return;
   loop();
@@ -51,6 +58,6 @@ var start = function() {
 
 // start game
 
-$(document).ready(() => {
+/*$(document).ready(() => {
   start();
-});
+});*/
